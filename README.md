@@ -1,15 +1,16 @@
-* 微信机器人
+# 微信机器人
 
-** 项目起步
+## 项目起步
 
-*** 依赖安装
+### 依赖安装
 
     - 安装项目依赖
     ```npm install```
     - 安装ts-node
     ```npm install -g ts-node```
 
-*** 运行
+### 运行
+
     ```ts-node robot/index.ts```
 
     ```
