@@ -4,16 +4,23 @@
 
 ### 依赖安装
 
-    - 安装项目依赖
-    ```npm install```
-    - 安装ts-node
-    ```npm install -g ts-node```
+     安装项目依赖
+    ```
+    npm install
+    ```
+     安装ts-node
+    ```
+    npm install -g ts-node
+    ```
 
 ### 运行
 
-    ```ts-node robot/index.ts```
+    ```
+    ts-node robot/index.ts
+    ```
 
     ```
+    
     function wechaty() {
     docker run \
         -t -i --rm \
@@ -25,6 +32,7 @@
     }
 
     wechaty robot/index.ts
+    
     ```
 
 未完待续...
