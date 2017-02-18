@@ -12,6 +12,7 @@
 *** 运行
     =ts-node robot/index.ts=
 
+    ```
     function wechaty() {
     docker run \
         -t -i --rm \
@@ -23,5 +24,6 @@
     }
 
     wechaty robot/index.ts
+    ```
 
 未完待续...
