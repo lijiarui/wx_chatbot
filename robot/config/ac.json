@@ -1,0 +1,19 @@
+{
+  "successgrouplist": [
+    "李佳芮",
+    "李佳芮"
+  ],
+  "failgrouplist": [],
+  "@7220857adc52602e895bf6f1af128080386875d26e3c5232f16a7d2d52518070": {
+    "name": "桔小秘",
+    "status": false
+  },
+  "@1500aae3181cd41d3af98b7ec7061694": {
+    "name": "李佳芮",
+    "status": false
+  },
+  "@b7162dddbf19d6445fd8925debbbd52e": {
+    "name": "李佳芮",
+    "status": true
+  }
+}

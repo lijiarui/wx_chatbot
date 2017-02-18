@@ -1,0 +1,25 @@
+{
+    "name": "robot_weixin",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "demo": "ts-node robot/angelcrunch1.ts",
+        "dev": "ts-node robot/index.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@c.sohuno.com:jiaruili/robot_weixin.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "chromedriver": "^2.25.3",
+        "nedb": "^1.8.0",
+        "qrcode-terminal": "^0.11.0",
+        "selenium-webdriver": "^3.0.1",
+        "tuling123-client": "0.0.1",
+        "wechaty": "^0.7.3",
+        "winston": "^2.3.0"
+    }
+}

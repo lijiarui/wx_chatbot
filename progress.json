@@ -1,0 +1,21 @@
+{
+  "apps" : [{
+    "name"        : "wx_chatbot",
+    "script"      : "src/bin/www",
+    "args"        : "['-i', 'max']",
+    "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+    "watch"       : "true",
+    "node_args"   : "--harmony",
+    "cwd"         : "/opt/www.d/wx_chatbot",
+    "error_file" : "./var/error.log",
+    "out_file"   : "./var/access.log",
+    "pid_file"   : "./var/node.pid",
+    "exec_mode"  : "fork_mode",
+    "port"       : 3000,
+    "max_memory_restart" : "2000M",
+    "env": {
+      "NODE_ENV": "test",
+      "PORT": 3000
+    }
+  }]
+}
