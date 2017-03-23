@@ -16,7 +16,7 @@ bot
     .on("scan", (url, code) => {
         let loginUrl = url.replace("qrcode", "l")
         qrcodeTerminal.generate(loginUrl)
-        ServerJiang.tellMe(`![logo]('+url+')`)
+        ServerJiang.tellMe('![logo]('+url+')')
         console.log(`${url} \n ${code}`)
     })
 

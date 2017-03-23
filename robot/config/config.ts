@@ -10,7 +10,7 @@ const Config = {
     // PAY_LINK: "http://weixin.ibanling.com/jdzfpay/items/12163?postscript_seller=",
     // FEE_ROOM_NAME: "天使汇VIP社群",
 
-    SCKEY: "SCU3520T4b3e8b858e984f3ab0b0f609ad04abce583e3f42c4079",
+    SCKEY: "SCU3520T554f6f395300c53ab5ccf50fbe279e4758d3eaf1bc4ae",
 
 };
 
