@@ -9,7 +9,7 @@ import logger from '../utils/logger';
 const os = require('os')
 
 export let info = {
-    botName: 'null',
+    botName: '桔小秘',
     hostName: os.hostname()+"lijiarui"
 }
 
