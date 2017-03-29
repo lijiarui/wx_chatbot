@@ -1,27 +1,28 @@
 {
-    "name": "robot_weixin",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "demo": "ts-node robot/angelcrunch1.ts",
-        "dev": "ts-node robot/index.ts",
-        "dist": "npm run clean && tsc && shx cp package.json dist/ && shx cp src/puppet-web/*.js dist/src/puppet-web/",
-        "clean": "shx rm -fr dist/*"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@c.sohuno.com:jiaruili/robot_weixin.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "chromedriver": "^2.25.3",
-        "nedb": "^1.8.0",
-        "qrcode-terminal": "^0.11.0",
-        "selenium-webdriver": "^3.0.1",
-        "tuling123-client": "0.0.1",
-        "wechaty": "^0.7.41",
-        "winston": "^2.3.0"
-    }
+  "name": "robot_weixin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "ts-node robot/angelcrunch1.ts",
+    "dev": "ts-node robot/index.ts",
+    "dist": "npm run clean && tsc && shx cp package.json dist/ && shx cp src/puppet-web/*.js dist/src/puppet-web/",
+    "clean": "shx rm -fr dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@c.sohuno.com:jiaruili/robot_weixin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^2.25.3",
+    "nedb": "^1.8.0",
+    "qrcode-terminal": "^0.11.0",
+    "selenium-webdriver": "^3.0.1",
+    "tuling123-client": "0.0.1",
+    "uuid": "^3.0.1",
+    "wechaty": "^0.7.41",
+    "winston": "^2.3.0"
+  }
 }
