@@ -11,6 +11,7 @@ import * as DbOperation from './utils/db-operation'
 
 const qrcodeTerminal = require("qrcode-terminal")
 const bot = Wechaty.instance({profile: "juxiaomi"})
+const uuid = require('uuid/v1')
 
 bot
     .on("scan", (url, code) => {
