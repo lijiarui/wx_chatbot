@@ -6,6 +6,8 @@ import logger from './utils/logger'
 import * as ServerJiang from './utils/server-jiang'
 import * as DbOperation from './utils/db-operation'
 
+const uuid = require('uuid/v1')
+
 let friendNum = 0
 export async function friendEventHandler(contact, request) {
     try {
@@ -26,6 +28,9 @@ export async function friendEventHandler(contact, request) {
             }, TaskManager.TaskName.FRIEND)
             return
         } else {
+            if (!this.contact.alias()) {
+                await this.contact.alias(uuid())
+            }
             if (DbOperation.isKeyword((contact as any).rawObj.Content).roomKey.length > 0) {
                 await putInRoom(DbOperation.isKeyword((contact as any).rawObj.Content).roomKey[0], contact)
             } else {
