@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "demo": "ts-node robot/angelcrunch1.ts",
-        "dev": "ts-node robot/index.ts"
+        "dev": "ts-node robot/index.ts",
+        "dist": "npm run clean && tsc && shx cp package.json dist/ && shx cp src/puppet-web/*.js dist/src/puppet-web/",
+        "clean": "shx rm -fr dist/*"
     },
     "repository": {
         "type": "git",
@@ -19,7 +21,7 @@
         "qrcode-terminal": "^0.11.0",
         "selenium-webdriver": "^3.0.1",
         "tuling123-client": "0.0.1",
-        "wechaty": "^0.7.3",
+        "wechaty": "^0.7.41",
         "winston": "^2.3.0"
     }
 }

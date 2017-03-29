@@ -2,7 +2,7 @@
 
 import * as ServerJiang from './utils/server-jiang'
 
-import {Wechaty, Message} from "wechaty"
+import {Wechaty, Message, Contact} from "wechaty"
 import * as Friend from './friend'
 import * as RoomHandle from "./room"
 import * as TaskManager from "./utils/task"
@@ -25,6 +25,7 @@ bot
         console.log(`${user.name()} login!`)
         logger.info('info', `${user.name()} login!`)
         ServerJiang.tellMe(`login`)
+        setTimeout(async function () {await alilas()}, 10 * 1000)
     })
 
     .on('logout', (user) => {
@@ -59,3 +60,24 @@ bot
 
 DbOperation.main()
 TaskManager.taskMain()
+
+async function alilas() {
+  const contactList = await Contact.findAll()
+  let num = 1
+  for (let i = 0; i < contactList.length; i++) {
+    const contact = contactList[i]
+    const aliasId = await contact.alias()
+    if (!aliasId) {
+      num ++
+      console.log(contact.name())
+       TaskManager.addTaskFunc( async _ => {
+                                  const result = await contact.alias(uuid())
+                                  if (result) {
+                                    console.log(`change successful: ${contact.alias()}`)
+                                  } else {
+                                    console.log(`change failed: ${contact.name()}`)
+                                  }
+                            }, TaskManager.TaskName.REMARK)
+    }
+  }
+}

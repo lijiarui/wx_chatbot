@@ -22,7 +22,7 @@ export const TaskName = {
     },
     REMARK: {
         type:'REMARK',
-        interval:60
+        interval:40
     }
 }
 
