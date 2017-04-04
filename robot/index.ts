@@ -65,6 +65,7 @@ TaskManager.taskMain()
 async function alilas() {
   const contactList = await Contact.findAll()
   let num = 1
+  console.log('联系人数量' + contactList.length)
   while (contactList.length < 3507) {
     const contactList = await Contact.findAll()
     console.log('联系人数量' + contactList.length)
