@@ -70,7 +70,7 @@ async function alilas() {
     const aliasId = contact.alias()
     if (!aliasId) {
       num ++
-      console.log('num' + contact.name())
+      console.log(num + contact.name())
        TaskManager.addTaskFunc( async _ => {
                                   const result = await contact.alias(uuid())
                                   if (result) {
