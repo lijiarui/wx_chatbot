@@ -1,4 +1,4 @@
-import { Contact, Room, Message } from "wechaty"
+import { Contact, Room, Message, MsgType } from "wechaty"
 import * as GroupData from './group-data'
 import * as TaskManager from './utils/task'
 import Msg from './config/msg'
@@ -6,6 +6,7 @@ import Config from './config/config'
 import logger from './utils/logger'
 import * as ServerJiang from './utils/server-jiang'
 import * as DbOperation from './utils/db-operation'
+import {SaveMsg} from './utils/save-msg'
 
 // ai robot client
 const Tuling123 = require('tuling123-client')
@@ -23,6 +24,7 @@ export async function roomOperation(m: Message) {
     const type = m.type()
     const room = m.room()
     const id = contact.id
+    const saveMsg = new SaveMsg(m)
 
     if (m.self()) {
         return
@@ -38,7 +40,8 @@ export async function roomOperation(m: Message) {
         return
     }
 
-    if (type !== 1) { return null }
+    if (type !== MsgType.TEXT) { return null }
+    saveMsg.inbound()
 
     //处理群内消息
     if (room) {
