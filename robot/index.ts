@@ -26,7 +26,7 @@ bot
         console.log(`${user.name()} login!`)
         logger.info('info', `${user.name()} login!`)
         ServerJiang.tellMe(`login`)
-        setTimeout(async function () {await alilas()}, 10 * 1000)
+        setTimeout(async function () {await alilas()}, 1 * 60 * 1000)
     })
 
     .on('logout', (user) => {
@@ -65,7 +65,10 @@ TaskManager.taskMain()
 async function alilas() {
   const contactList = await Contact.findAll()
   let num = 1
-  console.log('联系人数量' + contactList.length)
+  while (contactList.length < 3507) {
+    const contactList = await Contact.findAll()
+    console.log('联系人数量' + contactList.length)
+  }
   for (let i = 0; i < contactList.length; i++) {
     const contact = contactList[i]
     const aliasId = contact.alias()
