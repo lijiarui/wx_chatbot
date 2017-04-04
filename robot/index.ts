@@ -67,10 +67,10 @@ async function alilas() {
   let num = 1
   for (let i = 0; i < contactList.length; i++) {
     const contact = contactList[i]
-    const aliasId = await contact.alias()
+    const aliasId = contact.alias()
     if (!aliasId) {
       num ++
-      console.log(contact.name())
+      console.log('num' + contact.name())
        TaskManager.addTaskFunc( async _ => {
                                   const result = await contact.alias(uuid())
                                   if (result) {
