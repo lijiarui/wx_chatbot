@@ -65,6 +65,7 @@ TaskManager.taskMain()
 async function alilas() {
   const contactList = await Contact.findAll()
   let num = 1
+  console.log('联系人数量' + contactList.length)
   for (let i = 0; i < contactList.length; i++) {
     const contact = contactList[i]
     const aliasId = contact.alias()
