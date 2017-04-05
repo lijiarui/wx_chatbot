@@ -44,6 +44,14 @@ async function saveMsg(m: Message) {
   const channel = 'wechaty'
   const botName = 'volvo'
   const type = 'textMessage'
+  const contact = m.from()
+  const room = m.room()
+  let group
+  if (room) {
+     group = room
+  } else {
+     group = null
+  }
 
   const options = {
     method: 'POST',
@@ -58,10 +66,10 @@ async function saveMsg(m: Message) {
         "agent": botName,
         "direction": "inbound", // 是机器人接收的消息, outbound是机器人发送的消息
         "type": type,
-        "textMessage": this.content,
-        "sender": this.contact.name(),
-        "fromUserId": this.contact.alias(),
-        "group": this.group,
+        "textMessage": m.content(),
+        "sender": contact.name(),
+        "fromUserId": contact.alias(),
+        "group": group,
         "recipient": "" // TODO
       },
     json: true 
