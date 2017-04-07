@@ -48,7 +48,7 @@ async function saveMsg(m: Message) {
   const room = m.room()
   let group
   if (room) {
-     group = room
+     group = room.topic()
   } else {
      group = null
   }
