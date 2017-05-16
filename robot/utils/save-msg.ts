@@ -15,11 +15,13 @@ export class SaveMsg {
   private contact
   private type
   private group
+  private rawObj
 
   public constructor(public message: Message) {
     this.message = message
     this.content = message.content()
     this.contact = message.from()
+    this.rawObj = message.rawObj
     const room = message.room()
     if (room) {
       this.group = room.topic()
@@ -47,6 +49,7 @@ export class SaveMsg {
           "sender": this.contact.name(),
           "fromUserId": this.contact.alias(),
           "group": this.group,
+          "messageRawObj": this.rawObj,
           "recipient": "" // TODO
         },
       json: true 
